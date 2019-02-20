@@ -21,5 +21,6 @@ float HumiditySensorImpl::getValue()
 float HumiditySensorImpl::getValueTemperature()
 {
     DHT dht(hPin, DHTTYPE);
+        Serial.print(dht.readTemperature());
     return dht.readTemperature();
 }
